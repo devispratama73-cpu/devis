@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PVC | Solusi Plafon Mewah & Modern</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengambil font Google untuk kesan elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <nav>
+        <div class="container">
+            <div class="logo">Blitar<span>PVC</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#keunggulan">Keunggulan</a></li>
+                <li><a href="#katalog">Katalog</a></li>
+                <li><a href="https://wa.me/62895364926595" class="btn-contact">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>Buat Ruangan Menjadi <span class="highlight">Mahakarya</span></h1>
+            <p>Plafon PVC premium dengan desain artistik, tahan lama, dan bebas perawatan.</p>
+            <div class="hero-btns">
+                <a href="#katalog" class="btn-primary">Lihat Koleksi</a>
+                <a href="#keunggulan" class="btn-secondary">Mengapa Kami?</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="features">
+        <div class="container">
+            <h2 class="section-title reveal">Mengapa Memilih Plafon PVC Kami?</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="icon">🛡️</div>
+                    <h3>Anti Rayap & Air</h3>
+                    <p>Material berkualitas tinggi yang tidak akan lapuk oleh kelembapan atau serangan hama.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon">✨</div>
+                    <h3>Desain Elegan</h3>
+                    <p>Berbagai pilihan motif mulai dari serat kayu alami hingga minimalis modern.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon">⚡</div>
+                    <h3>Pemasangan Cepat</h3>
+                    <p>Proses instalasi yang bersih, praktis, dan tidak memerlukan pengecatan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Section -->
+    <section id="katalog" class="katalog">
+        <div class="container">
+            <h2 class="section-title reveal">Koleksi Desain Eksklusif</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Plafon Minimalis Modern">
+                    <div class="gallery-overlay"><span>Minimalis Modern</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="Plafon Mewah Klasik">
+                    <div class="gallery-overlay"><span>Luxury Classic</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1513519247352-4d7660a676b2?auto=format&fit=crop&q=80&w=800" alt="Plafon Serat Kayu">
+                    <div class="gallery-overlay"><span>Natural Wood</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=80&w=800" alt="Plafon Putih Bersih">
+                    <div class="gallery-overlay"><span>Pure White</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f505?auto=format&fit=crop&q=80&w=800" alt="Plafon Artistik">
+                    <div class="gallery-overlay"><span>Artistic Glow</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=800" alt="Plafon Kamar Tidur">
+                    <div class="gallery-overlay"><span>Elegant Bedroom</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer>
+        <div class="container">
+            <p>&copy; PVC Blitar Indonesia.</p>
+            <p>Jl. puntadewa purworejo, sutojayan RT02, Rw09</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Opsional: berhenti mengamati setelah animasi jalan sekali
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Efek Navbar saat Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
